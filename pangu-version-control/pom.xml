@@ -17,6 +17,7 @@
 
     <modules>
         <module>../pangu-basic</module>
+        <module>../pangu-personal-code</module>
     </modules>
 
 

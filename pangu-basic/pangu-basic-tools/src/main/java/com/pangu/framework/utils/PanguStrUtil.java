@@ -10,6 +10,6 @@ import cn.hutool.core.util.StrUtil;
  * @date 2022/5/18 14:15
  * @see StrUtil
  */
-public class PanguStringUtil extends StrUtil {
-
+public class PanguStrUtil extends StrUtil {
+    
 }
