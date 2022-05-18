@@ -28,5 +28,13 @@
 
 
     <!--子模块继承后,提供作用:锁定版本+子module不用groupId和version-->
-
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.pangu.framework</groupId>
+                <artifactId>pangu-basic-tools</artifactId>
+                <version>${version-control.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
