@@ -2,17 +2,21 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>pangu-version-control</artifactId>
         <groupId>com.pangu.framework</groupId>
         <version>1.0.0</version>
         <relativePath>../pangu-version-control/pom.xml</relativePath>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
-
     <artifactId>pangu-personal-code</artifactId>
 
     <name>pangu-personal-code</name>
-    <description>个人编码使用</description>
+    <description>个人编码使用,管理个人子项目使用</description>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>pangu-mybatis-generator</module>
+    </modules>
 
 </project>
