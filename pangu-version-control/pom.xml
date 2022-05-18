@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>pangu-parent</artifactId>
+        <groupId>com.pangu.framework</groupId>
+        <version>1.0.0</version>
+        <relativePath>../pangu-parent/pom.xml</relativePath>
+    </parent>
+    <artifactId>pangu-version-control</artifactId>
+    <packaging>pom</packaging>
+    <description>版本控制</description>
+    <!--此处版本号，必须和version-control.version中的版本号一样！！！-->
+    <version>1.0.0</version>
+
+    <modules>
+        <module>../pangu-basic</module>
+    </modules>
+
+
+    <!--统一管理jar包版本-->
+    <properties>
+        <!--内部jar包的版本号-->
+        <version-control.version>1.0.0</version-control.version>
+    </properties>
+
+
+    <!--子模块继承后,提供作用:锁定版本+子module不用groupId和version-->
+
+</project>

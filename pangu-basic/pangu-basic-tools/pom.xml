@@ -1,0 +1,13 @@
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>pangu-basic</artifactId>
+        <groupId>com.pangu.framework</groupId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>pangu-basic-tools</artifactId>
+    <name>pangu-basic-tools</name>
+    <packaging>jar</packaging>
+</project>
