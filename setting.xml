@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <!--本地仓库地址-->
+    <localRepository>D:\repo</localRepository>
+
+    <pluginGroups>
+        <!-- pluginGroup
+        <pluginGroup>com.your.plugins</pluginGroup>
+        -->
+    </pluginGroups>
+
+    <proxies>
+        <!-- proxy
+        <proxy>
+          <id>optional</id>
+          <active>true</active>
+          <protocol>http</protocol>
+          <username>proxyuser</username>
+          <password>proxypass</password>
+          <host>proxy.host.net</host>
+          <port>80</port>
+          <nonProxyHosts>local.net|some.host.com</nonProxyHosts>
+        </proxy>
+        -->
+    </proxies>
+
+
+    <servers>
+        <!--        <server>
+                    <id>nexus</id>
+                    <username>xxxx</username>
+                    <password>xxxx</password>
+                </server>-->
+    </servers>
+
+
+    <mirrors>
+        <!--        <mirror>
+                    <id>nexus</id>
+                    <url>https://xxxxx.com/repository/maven-public/</url>
+                    <mirrorOf>*</mirrorOf>
+                </mirror>-->
+    </mirrors>
+    <profiles>
+        <!--<profile>
+            &lt;!&ndash;该profile的唯一标识&ndash;&gt;
+            <id>nexus-profile</id>
+            &lt;!&ndash;远程仓库列表&ndash;&gt;
+            <repositories>
+                <repository>
+                    <id>nexus</id>
+                    &lt;!&ndash;虚拟的url，指向镜像的url&ndash;&gt;
+                    <url>https://xxxxx.com/repository/maven-public/</url>
+                    <layout>default</layout>
+                    &lt;!&ndash;允许从这个远程仓库，下载release版本的库&ndash;&gt;
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    &lt;!&ndash;允许从这个远程仓库，下载snapshot版本的库&ndash;&gt;
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+            &lt;!&ndash;插件仓库列表&ndash;&gt;
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>nexus</id>
+                    <url>https://xxxxx.com/repository/maven-public/</url>
+                    <layout>default</layout>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>-->
+    </profiles>
+
+    <activeProfiles>
+        <!--需要激活上述这些profile，才能生效-->
+        <!--        <activeProfile>nexus-profile</activeProfile>-->
+    </activeProfiles>
+</settings>
