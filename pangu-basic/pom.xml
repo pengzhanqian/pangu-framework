@@ -17,4 +17,17 @@
         <module>pangu-basic-tools</module>
     </modules>
 
+    <distributionManagement>
+        <repository>
+            <id>qianpz-nexus</id>
+            <name>maven-releases</name>
+            <url>http://192.168.244.128:8081/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>qianpz-nexus</id>
+            <name>maven-snapshots</name>
+            <url>http://192.168.244.128:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
 </project>

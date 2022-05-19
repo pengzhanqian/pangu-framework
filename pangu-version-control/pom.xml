@@ -40,16 +40,16 @@
     </dependencyManagement>
 
     <!-- 管理基础jar上传的maven仓库地址 -->
-    <!--    <distributionManagement>-->
-    <!--        <repository>-->
-    <!--            <id>nexus</id>-->
-    <!--            <name>maven-releases</name>-->
-    <!--            <url>https://xxxx.com/repository/maven-releases/</url>-->
-    <!--        </repository>-->
-    <!--        <snapshotRepository>-->
-    <!--            <id>nexus</id>-->
-    <!--            <name>maven-snapshots</name>-->
-    <!--            <url>https://xxxx.com/repository/maven-snapshots/</url>-->
-    <!--        </snapshotRepository>-->
-    <!--    </distributionManagement>-->
+    <distributionManagement>
+        <repository>
+            <id>qianpz-nexus</id>
+            <name>maven-releases</name>
+            <url>http://192.168.244.128:8081/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>qianpz-nexus</id>
+            <name>maven-snapshots</name>
+            <url>http://192.168.244.128:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
