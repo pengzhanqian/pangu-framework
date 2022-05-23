@@ -37,16 +37,16 @@
         <plugin type="org.mybatis.generator.plugins.UnmergeableXmlMappersPlugin"/>
 
         <!--    实体类添加 lombok插件    -->
-        <plugin type="org.mybatis.generator.plugins.LombokPlugin"/>
+        <plugin type="org.mybatis.generator.org.mybatis.generator.plugins.LombokPlugin"/>
 
         <!--   mapper 注解插件     -->
-        <plugin type="org.mybatis.generator.plugins.MyMapperAnnotationPlugin"/>
+        <plugin type="org.mybatis.generator.org.mybatis.generator.plugins.MyMapperAnnotationPlugin"/>
 
         <!--支持分页-->
         <!--        <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"/>-->
 
         <!--配置生成注释信息，最多配置一个 -->
-        <commentGenerator type="org.mybatis.generator.plugins.MyCommentGenerator">
+        <commentGenerator type="org.mybatis.generator.org.mybatis.generator.plugins.MyCommentGenerator">
             <property name="javaFileEncoding" value="UTF-8"/>
             <!-- 阻止生成注释包含时间戳 默认为false  需要改成true-->
             <property name="suppressDate" value="true"/>
@@ -67,7 +67,7 @@
             <property name="useInformationSchema" value="true"/>
         </jdbcConnection>
         <!-- 类型转换 -->
-        <javaTypeResolver type="org.mybatis.generator.plugins.JavaTypeResolverImplUtil">
+        <javaTypeResolver type="org.mybatis.generator.org.mybatis.generator.plugins.JavaTypeResolverImplUtil">
             <!-- 是否使用bigDecimal， false可自动转化以下类型（Long, Integer, Short, etc.）  改为true-->
             <property name="forceBigDecimals" value="true"/>
             <property name="useJSR310Types" value="false"/>

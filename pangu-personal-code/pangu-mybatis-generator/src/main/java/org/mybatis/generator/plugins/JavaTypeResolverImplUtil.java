@@ -1,4 +1,4 @@
-package plugins;
+package org.mybatis.generator.plugins;
 
 import org.mybatis.generator.api.dom.java.FullyQualifiedJavaType;
 import org.mybatis.generator.internal.types.JavaTypeResolverDefaultImpl;
