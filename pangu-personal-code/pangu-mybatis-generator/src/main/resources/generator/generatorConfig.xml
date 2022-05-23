@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <!-- 数据库驱动:选择你的本地硬盘上面的数据库驱动包   直接在插件中指定依赖-->
+    <!--    <classPathEntry location="${baseDir}\mysql\mysql-connector-java\8.0.16\mysql-connector-java-8.0.16.jar"/>-->
+
+    <!-- 一个数据库一个context -->
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+        <!-- 自动识别数据库关键字，默认false，如果设置为true，根据SqlReservedWords中定义的关键字列表；一般保留默认值，遇到数据库关键字（Java关键字），使用columnOverride覆盖 -->
+        <property name="autoDelimitKeywords" value="true"/>
+
+        <!-- 生成的Java文件的编码 -->
+        <property name="javaFileEncoding" value="utf-8"/>
+
+        <!-- beginningDelimiter和endingDelimiter：指明数据库的用于标记数据库对象名的符号，比如ORACLE就是双引号，MYSQL默认是`单引号； -->
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <!-- 格式化java代码 -->
+        <property name="javaFormatter" value="org.mybatis.generator.api.dom.DefaultJavaFormatter"/>
+
+        <!-- 格式化XML代码 -->
+        <property name="xmlFormatter" value="org.mybatis.generator.api.dom.DefaultXmlFormatter"/>
+
+        <!--   实体类序列化插件     -->
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
+
+        <!--   实体类添加ToString方法     -->
+        <!--        <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>-->
+
+        <!--   实体类添加equals和hashcode方法     -->
+        <!--        <plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin"/>-->
+
+        <!-- 生成 mapper.xml时不 merge 直接覆盖原文件  覆盖生成XML文件 -->
+        <plugin type="org.mybatis.generator.plugins.UnmergeableXmlMappersPlugin"/>
+
+        <!--    实体类添加 lombok插件    -->
+        <plugin type="org.mybatis.generator.plugins.LombokPlugin"/>
+
+        <!--   mapper 注解插件     -->
+        <plugin type="org.mybatis.generator.plugins.MyMapperAnnotationPlugin"/>
+
+        <!--支持分页-->
+        <!--        <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"/>-->
+
+        <!--配置生成注释信息，最多配置一个 -->
+        <commentGenerator type="org.mybatis.generator.plugins.MyCommentGenerator">
+            <property name="javaFileEncoding" value="UTF-8"/>
+            <!-- 阻止生成注释包含时间戳 默认为false  需要改成true-->
+            <property name="suppressDate" value="true"/>
+            <!-- 注释是否添加数据库表的备注信息 默认为false  使用默认不要英文注释-->
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        <!--jdbc连接   数据库链接URL，用户名、密码 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://10.10.8.15:3306/mdc_live?useUnicode=true&amp;characterEncoding=utf-8&amp;serverTimezone=Asia/Shanghai&amp;zeroDateTimeBehavior=CONVERT_TO_NULL"
+                        userId="root"
+                        password="ufhUhsd7ysdGH">
+            <!--防止生成其他库同名表-->
+            <property name="nullCatalogMeansCurrent" value="true"/>
+            <!--解决mysql驱动升级到8.0后不生成指定数据库代码的问题-->
+            <property name="nullCatalogMeansCurrent" value="true"/>
+            <!--  获取表的注释信息          -->
+            <property name="useInformationSchema" value="true"/>
+        </jdbcConnection>
+        <!-- 类型转换 -->
+        <javaTypeResolver type="org.mybatis.generator.plugins.JavaTypeResolverImplUtil">
+            <!-- 是否使用bigDecimal， false可自动转化以下类型（Long, Integer, Short, etc.）  改为true-->
+            <property name="forceBigDecimals" value="true"/>
+            <property name="useJSR310Types" value="false"/>
+
+        </javaTypeResolver>
+
+        <!-- 生成实体类地址 -->
+        <javaModelGenerator targetPackage="com.muducloud.phoenix.inner.api.live.domain.eo"
+                            targetProject="src/main/java">
+            <!-- 是否让schema作为包的后缀 -->
+            <property name="enableSubPackages" value="true"/>
+            <!-- 从数据库返回的值去掉前后空格 -->
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <!-- 生成mapper.xml的包名和位置-->
+        <sqlMapGenerator targetPackage="com.muducloud.phoenix.live.mapper"
+                         targetProject="src/main/java">
+            <!-- 是否让schema作为包的后缀 -->
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <!-- 生成接口dao  type="ANNOTATEDMAPPER",生成Java Model 和基于注解的Mapper对象
+                         type="MIXEDMAPPER",生成基于注解的Java Model 和相应的Mapper对象
+                         type="XMLMAPPER",生成SQLMap XML文件和独立的Mapper接口 -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.muducloud.phoenix.live.mapper"
+                             targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <!--生成全部表tableName设为%-->
+        <table tableName="mdc_publish_realtime_transcode" domainObjectName="PublishRealtimeTranscodeEO"
+               enableSelectByPrimaryKey="true"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+
+    </context>
+</generatorConfiguration>
