@@ -17,6 +17,7 @@
 
     <modules>
         <module>pangu-mybatis-generator</module>
+        <module>pangu-mybatis-plus-generator</module>
     </modules>
 
 </project>

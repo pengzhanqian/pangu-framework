@@ -36,6 +36,9 @@
         <mybatis-generator-core.version>1.4.1</mybatis-generator-core.version>
         <mybatis-generator-maven-plugin.version>1.4.1</mybatis-generator-maven-plugin.version>
         <mybatis-spring.version>2.1.1</mybatis-spring.version>
+        <mybatis-plus-boot.version>3.1.0</mybatis-plus-boot.version>
+        <mybatis-plus-generator.version>3.1.0</mybatis-plus-generator.version>
+        <freemarker.version>2.3.28</freemarker.version>
     </properties>
 
     <!--子模块继承后,提供作用:锁定版本+子module不用groupId和version-->
@@ -121,6 +124,23 @@
                 <groupId>org.mybatis.generator</groupId>
                 <artifactId>mybatis-generator-maven-plugin</artifactId>
                 <version>${mybatis-generator-maven-plugin.version}</version>
+            </dependency>
+            <!-- 引入mybatis-plus 和 springboot 集成包 和 生成代码包-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-generator</artifactId>
+                <version>${mybatis-plus-generator.version}</version>
+            </dependency>
+            <!--   引入 mybatis-plus 需要的 freemarker依赖         -->
+            <dependency>
+                <groupId>org.freemarker</groupId>
+                <artifactId>freemarker</artifactId>
+                <version>${freemarker.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
