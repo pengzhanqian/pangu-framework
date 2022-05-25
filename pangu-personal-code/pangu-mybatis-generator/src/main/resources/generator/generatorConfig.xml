@@ -99,7 +99,7 @@
         </javaClientGenerator>
 
         <!--生成全部表tableName设为%-->
-        <table tableName="mdc_publish_realtime_transcode" domainObjectName="PublishRealtimeTranscodeEO"
+        <table tableName="mdc_publish_task_event_history" domainObjectName="PublishTaskEventHistoryEO"
                enableSelectByPrimaryKey="true"
                enableCountByExample="false"
                enableUpdateByExample="false"
