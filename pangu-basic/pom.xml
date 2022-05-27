@@ -15,6 +15,7 @@
 
     <modules>
         <module>pangu-basic-tools</module>
+        <module>pangu-basic-framework</module>
     </modules>
 
     <distributionManagement>
