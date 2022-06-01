@@ -1,0 +1,7 @@
+server:
+  port: 60002
+spring:
+  application:
+    name: pangu-springboot-redission-demo01
+
+
