@@ -8,6 +8,7 @@ import com.baomidou.mybatisplus.generator.AutoGenerator;
 import com.baomidou.mybatisplus.generator.InjectionConfig;
 import com.baomidou.mybatisplus.generator.config.*;
 import com.baomidou.mybatisplus.generator.config.po.TableInfo;
+import com.baomidou.mybatisplus.generator.config.rules.DateType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
 import com.pangu.framework.utils.PanguStrUtil;
@@ -41,17 +42,47 @@ public class MybatisPlusGenerator {
     }
 
     public static void main(String[] args) {
+        //得到当前项目的路径
+        String projectPath = MybatisPlusGenerator.class.getResource("/").getPath().replaceAll("/target/(test-)?classes/", "");
+
         // 代码生成器
         AutoGenerator mpg = new AutoGenerator();
 
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
-        String projectPath = MybatisPlusGenerator.class.getResource("/").getPath().replaceAll("/target/(test-)?classes/", "");
+        //设置统一设置生成的文件输出的根目录  我们这里不进行配置 因为不同的文件会出现再不同的服务中
         gc.setOutputDir(projectPath + "/src/main/java");
-        gc.setAuthor("pengzhan.qian");
+        //设置作者
+        gc.setAuthor("mybatis plus generator");
+        //设置生成代码后是否打开文件
         gc.setOpen(false);
+        //设置是否覆盖源文件
         gc.setFileOverride(true);
-        gc.setIdType(IdType.AUTO);
+        //设置是否开启activeRecord模式                          默认关闭
+        gc.setActiveRecord(false);
+        //设置是否开启XML中的Mybatis的二级缓存                   默认关闭
+        gc.setEnableCache(false);
+        //设置是否配置XML中的ResultMap                          默认关闭
+        gc.setBaseResultMap(false);
+        //设置是否配置XML的基础字段 baseColumnList              默认关闭
+        gc.setBaseColumnList(false);
+        //设置是否开启Swagger2的注解放在Controller中的方法上     默认关闭
+        gc.setSwagger2(false);
+        /**
+         *     设置主键策略
+         *     {@link com.baomidou.mybatisplus.annotation.IdType}
+         *     本次选择不处理 业务注入
+         */
+        gc.setIdType(IdType.NONE);
+        //设置生成的代码中的注释的日期格式
+        gc.setDateType(DateType.ONLY_DATE);
+        //设置MapperName xmlMapperName serviceName serviceImplName controllerName
+        gc.setMapperName("%sMapper");
+        gc.setXmlName("%sMapper");
+        gc.setServiceName("%sService");
+        gc.setServiceImplName("%sServiceImpl");
+        gc.setControllerName("%sController");
+        //将全局配置加入生成器
         mpg.setGlobalConfig(gc);
 
         // 数据源配置
@@ -66,7 +97,7 @@ public class MybatisPlusGenerator {
         // 包配置
         PackageConfig pc = new PackageConfig();
         //pc.setModuleName(scanner("模块名"));
-        pc.setParent("com.muducloud.phoenix");
+        //pc.setParent("com.muducloud.phoenix.job.autodb");
 //        pc.setModuleName("issue");
         mpg.setPackageInfo(pc);
 

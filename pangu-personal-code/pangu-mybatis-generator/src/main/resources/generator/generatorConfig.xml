@@ -55,10 +55,14 @@
         </commentGenerator>
 
         <!--jdbc连接   数据库链接URL，用户名、密码 -->
+        <!--        <jdbcConnection driverClass="com.mysql.jdbc.Driver"-->
+        <!--                        connectionURL="jdbc:mysql://10.10.8.15:3306/mdc_live?useUnicode=true&amp;characterEncoding=utf-8&amp;serverTimezone=Asia/Shanghai&amp;zeroDateTimeBehavior=CONVERT_TO_NULL"-->
+        <!--                        userId="root"-->
+        <!--                        password="ufhUhsd7ysdGH">-->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://10.10.8.15:3306/mdc_live?useUnicode=true&amp;characterEncoding=utf-8&amp;serverTimezone=Asia/Shanghai&amp;zeroDateTimeBehavior=CONVERT_TO_NULL"
+                        connectionURL="jdbc:mysql://192.168.50.33:3306/mdc_job?useUnicode=true&amp;characterEncoding=utf-8&amp;serverTimezone=Asia/Shanghai&amp;zeroDateTimeBehavior=CONVERT_TO_NULL"
                         userId="root"
-                        password="ufhUhsd7ysdGH">
+                        password="!@qwAS12">
             <!--防止生成其他库同名表-->
             <property name="nullCatalogMeansCurrent" value="true"/>
             <!--解决mysql驱动升级到8.0后不生成指定数据库代码的问题-->
@@ -75,7 +79,7 @@
         </javaTypeResolver>
 
         <!-- 生成实体类地址 -->
-        <javaModelGenerator targetPackage="com.muducloud.phoenix.inner.api.live.domain.eo"
+        <javaModelGenerator targetPackage="com.muducloud.phoenix.inner.api.job.domain.eo"
                             targetProject="src/main/java">
             <!-- 是否让schema作为包的后缀 -->
             <property name="enableSubPackages" value="true"/>
@@ -84,7 +88,7 @@
         </javaModelGenerator>
 
         <!-- 生成mapper.xml的包名和位置-->
-        <sqlMapGenerator targetPackage="com.muducloud.phoenix.live.mapper"
+        <sqlMapGenerator targetPackage="com.muducloud.phoenix.job.mapper"
                          targetProject="src/main/java">
             <!-- 是否让schema作为包的后缀 -->
             <property name="enableSubPackages" value="true"/>
@@ -93,13 +97,22 @@
         <!-- 生成接口dao  type="ANNOTATEDMAPPER",生成Java Model 和基于注解的Mapper对象
                          type="MIXEDMAPPER",生成基于注解的Java Model 和相应的Mapper对象
                          type="XMLMAPPER",生成SQLMap XML文件和独立的Mapper接口 -->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.muducloud.phoenix.live.mapper"
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.muducloud.phoenix.job.mapper"
                              targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
         <!--生成全部表tableName设为%-->
-        <table tableName="mdc_publish_task_event_history" domainObjectName="PublishTaskEventHistoryEO"
+        <!--        <table tableName="mdc_protocol_exchange_round" domainObjectName="ProtocolExchangeRoundEO"-->
+        <!--               enableSelectByPrimaryKey="true"-->
+        <!--               enableCountByExample="false"-->
+        <!--               enableUpdateByExample="false"-->
+        <!--               enableDeleteByExample="false"-->
+        <!--               enableSelectByExample="false"-->
+        <!--               selectByExampleQueryId="false">-->
+        <!--            <property name="useActualColumnNames" value="false"/>-->
+        <!--        </table>-->
+        <table tableName="mdc_precheck_round_task" domainObjectName="PrecheckRoundTaskEO"
                enableSelectByPrimaryKey="true"
                enableCountByExample="false"
                enableUpdateByExample="false"
@@ -108,6 +121,15 @@
                selectByExampleQueryId="false">
             <property name="useActualColumnNames" value="false"/>
         </table>
+        <!--        <table tableName="mdc_protocol_exchange_round_task" domainObjectName="ProtocolExchangeRoundTaskEO"-->
+        <!--               enableSelectByPrimaryKey="true"-->
+        <!--               enableCountByExample="false"-->
+        <!--               enableUpdateByExample="false"-->
+        <!--               enableDeleteByExample="false"-->
+        <!--               enableSelectByExample="false"-->
+        <!--               selectByExampleQueryId="false">-->
+        <!--            <property name="useActualColumnNames" value="false"/>-->
+        <!--        </table>-->
 
     </context>
 </generatorConfiguration>

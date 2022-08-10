@@ -36,8 +36,8 @@
         <mybatis-generator-core.version>1.4.1</mybatis-generator-core.version>
         <mybatis-generator-maven-plugin.version>1.4.1</mybatis-generator-maven-plugin.version>
         <mybatis-spring.version>2.1.1</mybatis-spring.version>
-        <mybatis-plus-boot.version>3.1.0</mybatis-plus-boot.version>
-        <mybatis-plus-generator.version>3.1.0</mybatis-plus-generator.version>
+        <mybatis-plus-boot.version>3.3.2</mybatis-plus-boot.version>
+        <mybatis-plus-generator.version>3.3.2</mybatis-plus-generator.version>
         <freemarker.version>2.3.28</freemarker.version>
         <redission-springboot-starter.version>3.13.5</redission-springboot-starter.version>
     </properties>
@@ -157,12 +157,12 @@
         <repository>
             <id>qianpz-nexus</id>
             <name>maven-releases</name>
-            <url>http://192.168.244.128:8081/repository/maven-releases/</url>
+            <url>http://192.168.244.129:8081/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
             <id>qianpz-nexus</id>
             <name>maven-snapshots</name>
-            <url>http://192.168.244.128:8081/repository/maven-snapshots/</url>
+            <url>http://192.168.244.129:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 
