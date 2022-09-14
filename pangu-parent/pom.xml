@@ -152,18 +152,56 @@
         </dependencies>
     </dependencyManagement>
 
+    <!--    <profiles>-->
+    <!--        <profile>-->
+    <!--            &lt;!&ndash;该profile的唯一标识&ndash;&gt;-->
+    <!--            <id>qianpz-nexus-profile</id>-->
+    <!--            &lt;!&ndash;远程仓库列表&ndash;&gt;-->
+    <!--            <repositories>-->
+    <!--                <repository>-->
+    <!--                    <id>qianpz-nexus</id>-->
+    <!--                    &lt;!&ndash;虚拟的url，指向镜像的url&ndash;&gt;-->
+    <!--                    <url>http://192.168.91.129:8081/repository/maven-public/</url>-->
+    <!--                    <layout>default</layout>-->
+    <!--                    &lt;!&ndash;允许从这个远程仓库，下载release版本的库&ndash;&gt;-->
+    <!--                    <releases>-->
+    <!--                        <enabled>true</enabled>-->
+    <!--                    </releases>-->
+    <!--                    &lt;!&ndash;允许从这个远程仓库，下载snapshot版本的库&ndash;&gt;-->
+    <!--                    <snapshots>-->
+    <!--                        <enabled>true</enabled>-->
+    <!--                    </snapshots>-->
+    <!--                </repository>-->
+    <!--            </repositories>-->
+    <!--            &lt;!&ndash;插件仓库列表&ndash;&gt;-->
+    <!--            <pluginRepositories>-->
+    <!--                <pluginRepository>-->
+    <!--                    <id>qianpz-nexus</id>-->
+    <!--                    <url>http://192.168.91.129:8081/repository/maven-public/</url>-->
+    <!--                    <layout>default</layout>-->
+    <!--                    <releases>-->
+    <!--                        <enabled>true</enabled>-->
+    <!--                    </releases>-->
+    <!--                    <snapshots>-->
+    <!--                        <enabled>true</enabled>-->
+    <!--                    </snapshots>-->
+    <!--                </pluginRepository>-->
+    <!--            </pluginRepositories>-->
+    <!--        </profile>-->
+    <!--    </profiles>-->
 
     <distributionManagement>
         <repository>
-            <id>qianpz-nexus-profile</id>
+            <id>qianpz-nexus</id>
             <name>maven-releases</name>
             <url>http://192.168.91.129:8081/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
-            <id>qianpz-nexus-profile</id>
+            <id>qianpz-nexus</id>
             <name>maven-snapshots</name>
             <url>http://192.168.91.129:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
+
 
 </project>
