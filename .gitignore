@@ -24,3 +24,5 @@ hs_err_pid*
 pangu-personal-code/pangu-mybatis-generator/src/main/java/com/muducloud/
 pangu-personal-code/pangu-mybatis-plus-generator/src/main/java/com/muducloud/
 pangu-personal-code/pangu-mybatis-plus-generator/src/main/resources/mapper/
+*.iml
+**/target/*
