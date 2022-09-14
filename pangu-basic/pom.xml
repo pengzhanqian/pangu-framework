@@ -18,16 +18,17 @@
         <module>pangu-basic-framework</module>
     </modules>
 
+    <!-- 管理基础jar上传的maven仓库地址 -->
     <distributionManagement>
         <repository>
             <id>qianpz-nexus</id>
             <name>maven-releases</name>
-            <url>http://192.168.244.129:8081/repository/maven-releases/</url>
+            <url>http://192.168.91.129:8081/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
             <id>qianpz-nexus</id>
             <name>maven-snapshots</name>
-            <url>http://192.168.244.129:8081/repository/maven-snapshots/</url>
+            <url>http://192.168.91.129:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 
