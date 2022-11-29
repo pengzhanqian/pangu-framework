@@ -1,0 +1,7 @@
+server:
+  port: 60003
+spring:
+  application:
+    name: pangu-spring-cloud-flux-mono
+
+

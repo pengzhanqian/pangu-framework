@@ -11,8 +11,8 @@ import org.springframework.context.ConfigurableApplicationContext;
  * @date 2022/5/24 10:15
  */
 @SpringBootApplication(scanBasePackages = {"com.pangu.framework"})
-public class PanguSpringbootRedissionDemo01Application {
+public class PanguSpringCloudFluxMonoApplication {
     public static void main(String[] args) {
-        ConfigurableApplicationContext applicationContext = SpringApplication.run(PanguSpringbootRedissionDemo01Application.class);
+        ConfigurableApplicationContext applicationContext = SpringApplication.run(PanguSpringCloudFluxMonoApplication.class);
     }
 }

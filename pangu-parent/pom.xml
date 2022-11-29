@@ -40,6 +40,7 @@
         <mybatis-plus-generator.version>3.3.2</mybatis-plus-generator.version>
         <freemarker.version>2.3.28</freemarker.version>
         <redission-springboot-starter.version>3.13.5</redission-springboot-starter.version>
+        <reactor.code.version>1.1.6.RELEASE</reactor.code.version>
     </properties>
 
     <!--子模块继承后,提供作用:锁定版本+子module不用groupId和version-->
@@ -144,10 +145,15 @@
                 <version>${freemarker.version}</version>
             </dependency>
             <!--            引入redission相关集成包-->
+            <!--            <dependency>-->
+            <!--                <groupId>org.redisson</groupId>-->
+            <!--                <artifactId>redisson-spring-boot-starter</artifactId>-->
+            <!--                <version>${redission-springboot-starter.version}</version>-->
+            <!--            </dependency>-->
             <dependency>
-                <groupId>org.redisson</groupId>
-                <artifactId>redisson-spring-boot-starter</artifactId>
-                <version>${redission-springboot-starter.version}</version>
+                <groupId>org.projectreactor</groupId>
+                <artifactId>reactor-core</artifactId>
+                <version>${reactor.code.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

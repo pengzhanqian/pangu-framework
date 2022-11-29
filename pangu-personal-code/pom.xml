@@ -18,7 +18,7 @@
     <modules>
         <module>pangu-mybatis-generator</module>
         <module>pangu-mybatis-plus-generator</module>
-        <module>pangu-springboot-redission-demo01</module>
+        <module>pangu-spring-cloud-flux-mono</module>
     </modules>
 
 </project>
